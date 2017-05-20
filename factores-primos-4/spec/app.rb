@@ -1,18 +1,19 @@
 require 'sinatra'
 require_relative '../model/impresor'
 require_relative '../model/validador'
+require_relative '../model/controlador'
 
 get '/primos/:valor' do |numeroAFactorizar|
   puts numeroAFactorizar
-  f = Impresor.new
-  f.imprimirEnFormatoAscendente(numeroAFactorizar)
+  f = Controlador.new
+  f.calcularFactores(numeroAFactorizar,"ASC")
 end
 
 post '/primos' do
   numeroAFactorizar = params['x']
   puts numeroAFactorizar
-  f = Impresor.new
-  f.imprimirEnFormatoDescendente(numeroAFactorizar)
+  f = Controlador.new
+  f.calcularFactores(numeroAFactorizar,"DESC")
 end
 
 get '/hola/:nombre' do |numeroAFactorizar|
