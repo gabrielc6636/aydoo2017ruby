@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative '../model/impresor'
+require_relative '../model/validador'
 
 get '/primos/:valor' do |numeroAFactorizar|
   puts numeroAFactorizar
@@ -12,6 +13,15 @@ post '/primos' do
   puts numeroAFactorizar
   f = Impresor.new
   f.imprimirEnFormatoDescendente(numeroAFactorizar)
+end
+
+get '/hola/:nombre' do |numeroAFactorizar|
+  variable = numeroAFactorizar
+  f = Validador.new
+ if f.es_Numerico(variable)==true
+  puts "Es Numerico"
+  end
+  "Hola #{variable}!"
 end
 
 
