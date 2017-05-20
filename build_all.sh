@@ -1,10 +1,10 @@
-#!bin/bin/bash
+#!/bin/bash
 
 set -e
 
 for dir in */ ; do
-	cd $dir
-	bundle install
-	rake
-	cd..
-done%
+  cd $dir
+  bundle install
+  rake
+  cd ..
+done
