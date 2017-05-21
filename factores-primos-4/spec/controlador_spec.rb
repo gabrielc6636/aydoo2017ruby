@@ -11,7 +11,8 @@ describe 'Controlador' do
       @respuestaOK = @controlador.generarFactores('360','ASC')
       @respuestaOK2 = @controlador.generarFactores('360','DESC')
 	    @respuestaBR = @controlador.generarFactores('Gabriel','ASC')
-   
+      @respuestaASC = @controlador.calcularFactores('360','ASC')
+      @respuestaDESC = @controlador.calcularFactores('360','DESC')
     end
 
   describe "OK" do
@@ -26,8 +27,14 @@ describe 'Controlador' do
       it "si tengo 360 de parametro obtengo 2 2 2 3 3 5" do
         expect(@respuestaOK.getBody).to eq ' 2  2  2  3  3  5 '
       end
-    it "si tengo 360 de parametro obtengo 2 2 2 3 3 5" do
+    it "si tengo 360 de parametro obtengo 5  3  3  2  2  2" do
         expect(@respuestaOK2.getBody).to eq ' 5  3  3  2  2  2 '
+      end 
+    it "si tengo 360 de parametro obtengo 2 2 2 3 3 5" do
+        expect(@respuestaASC).to eq ' 2  2  2  3  3  5 '
+      end
+    it "si tengo 360 de parametro obtengo 5  3  3  2  2  2" do
+        expect(@respuestaDESC).to eq ' 5  3  3  2  2  2 '
       end 
     end
   
