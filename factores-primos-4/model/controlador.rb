@@ -15,7 +15,6 @@ class Controlador
   
 	def calcularFactores(numeroPorFactorizar,tipoFormato)
     numeroAFactorizar = numeroPorFactorizar
-    impresor = Impresor.new
     cadenaDeFactores = ''
     opciones = {}
     opciones["ASC"] = ImpresorAscendente.new
