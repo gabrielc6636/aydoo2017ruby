@@ -1,6 +1,4 @@
 require 'sinatra'
-require_relative '../model/impresor'
-require_relative '../model/validador'
 require_relative '../model/controlador'
 require_relative '../model/respuesta'
 
