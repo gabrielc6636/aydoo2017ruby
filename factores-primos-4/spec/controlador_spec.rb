@@ -25,16 +25,16 @@ describe 'Controlador' do
         expect(@respuestaOK.getStatus).to eq 200
       end
       it "si tengo 360 de parametro obtengo 2 2 2 3 3 5" do
-        expect(@respuestaOK.getBody).to eq ' 2  2  2  3  3  5 '
+        expect(@respuestaOK.getBody).to eq '2,2,2,3,3,5'
       end
     it "si tengo 360 de parametro obtengo 5  3  3  2  2  2" do
-        expect(@respuestaOK2.getBody).to eq ' 5  3  3  2  2  2 '
+        expect(@respuestaOK2.getBody).to eq '5,3,3,2,2,2'
       end 
     it "si tengo 360 de parametro obtengo 2 2 2 3 3 5" do
-        expect(@respuestaASC).to eq ' 2  2  2  3  3  5 '
+        expect(@respuestaASC).to eq '2,2,2,3,3,5'
       end
     it "si tengo 360 de parametro obtengo 5  3  3  2  2  2" do
-        expect(@respuestaDESC).to eq ' 5  3  3  2  2  2 '
+        expect(@respuestaDESC).to eq '5,3,3,2,2,2'
       end 
     end
   

@@ -8,10 +8,7 @@ class ImpresorAscendente
     factorizador = Factorizador.new
     listaDeFactores = factorizador.calcularFactores(numeroAFactorizar)
     
-    cadenaDeFactores = ''
-    for arr in listaDeFactores
-      cadenaDeFactores = cadenaDeFactores + ' ' + arr.to_s + ' '
-    end
+    cadenaDeFactores = listaDeFactores.join(',')
     
     return cadenaDeFactores
     

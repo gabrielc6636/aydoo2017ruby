@@ -9,10 +9,8 @@ class ImpresorDescendente
     listaDeFactores = factorizador.calcularFactores(numeroAFactorizar)
     
     listaDeFactores = listaDeFactores.sort.reverse
-    cadenaDeFactores = ''
-    for arr in listaDeFactores
-      cadenaDeFactores = cadenaDeFactores + ' ' + arr.to_s + ' '
-    end
+    
+    cadenaDeFactores = listaDeFactores.join(',')
     
     return cadenaDeFactores
     
