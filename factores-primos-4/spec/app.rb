@@ -5,7 +5,6 @@ require_relative '../model/controlador'
 require_relative '../model/respuesta'
 
 get '/primos/:valor' do |numeroAFactorizar|
-  puts numeroAFactorizar
   controlador = Controlador.new
   respuesta = controlador.generarFactores(numeroAFactorizar,"ASC")
   status respuesta.getStatus
@@ -14,7 +13,6 @@ end
 
 post '/primos' do
   numeroAFactorizar = params['x']
-  puts numeroAFactorizar
   controlador = Controlador.new
   respuesta = controlador.generarFactores(numeroAFactorizar,"DESC")
   status respuesta.getStatus
