@@ -1,6 +1,6 @@
 require 'sinatra'
-require_relative '../model/controlador'
-require_relative '../model/respuesta'
+require_relative 'model/controlador'
+require_relative 'model/respuesta'
 
 get '/primos' do
   numeroAFactorizar = params[:x]
