@@ -12,13 +12,13 @@ describe 'APP' do
 	    expect(last_response.status).to eq 400
 	end
 
-	it "si llamo a post/primos con parametro  12 deberia ser 3,2,2" do
-	    post "/primos", params = {"x" => "12"}
+	it "si llamo a get/primos con parametro  12 deberia ser 3,2,2" do
+	    get "/primos", params = {"x" => "12"}
 	    expect(last_response.body).to eq "3,2,2"
 	end
 
-	it "si llamo a get/primos con parametro 12 deberia ser 2,3,3" do
-	    get "/primos", params = {"x" => "12"}
+	it "si llamo a post/primos con parametro 12 deberia ser 2,3,3" do
+	    post "/primos", params = {"x" => "12"}
 	    expect(last_response.body).to eq "2,2,3"
 	end
 
