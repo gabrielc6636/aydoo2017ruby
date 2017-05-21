@@ -13,8 +13,6 @@ class Factorizador
                 end
                 factor=factor+1
             end
-        else
-            puts "el valor debe ser mayor a 1"
         end
     return listaDeFactores
   end
