@@ -2,6 +2,7 @@
  
 require 'rspec' 
 require_relative '../model/controlador'
+require_relative '../model/respuesta'
 
 describe 'Controlador' do
 
@@ -16,7 +17,8 @@ describe 'Controlador' do
   end
   
   it 'tengo 360 de parametro reviso que sea numerico' do
-    expect(controlador.generarFactores('360').getStatus).to eq 200
+    respuesta  = controlador.generarFactores('360')
+    expect(respuesta.getStatus).to eq 200
   end
   
   it 'tengo Gabriel de parametro reviso que sea numerico' do
