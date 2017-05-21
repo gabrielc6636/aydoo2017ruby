@@ -4,13 +4,13 @@ require_relative '../model/respuesta'
 describe 'Respuesta' do
 
 	before do
-      @respuestaOK = Respuesta.new(:status => 200, :body => "OK")
-	    @respuestaBR = Respuesta.new(:status => 400, :body => "Bad Request")
+      @respuestaOK = Respuesta.new(200,"OK")
+	    @respuestaBR = Respuesta.new(400,"Bad Request")
     end
 
   describe "OK" do
       it "si tuve un valor numerico tengo que tener 200" do
-        expect(@respuestaOK.getStatus).to eq(200)
+        expect(@respuestaOK.getStatus).to eq 200
       end
     end
   
