@@ -5,24 +5,39 @@ require_relative '../model/controlador'
 
 get '/primos/:valor' do |numeroAFactorizar|
   puts numeroAFactorizar
-  f = Controlador.new
-  f.calcularFactores(numeroAFactorizar,"ASC")
+  controlador = Controlador.new
+  if controlador.validarParametro(numeroAFactorizar) == true
+    body controlador.calcularFactores(numeroAFactorizar,"ASC")
+  else
+     status 400
+      body 'Bad Request'
+  end
 end
 
 post '/primos' do
   numeroAFactorizar = params['x']
   puts numeroAFactorizar
-  f = Controlador.new
-  f.calcularFactores(numeroAFactorizar,"DESC")
+  controlador = Controlador.new
+  if controlador.validarParametro(numeroAFactorizar) == true
+     body controlador.calcularFactores(numeroAFactorizar,"DESC")
+  else
+     status 400
+      body 'Bad Request'
+  end
 end
 
 get '/hola/:nombre' do |numeroAFactorizar|
   variable = numeroAFactorizar
+  "Hola #{variable}!"
   f = Validador.new
  if f.es_Numerico(variable)==true
   puts "Es Numerico"
+   body 'Es Numerico'
+ else
+    status 400
+    body 'Bad Request'
   end
-  "Hola #{variable}!"
+  
 end
 
 
