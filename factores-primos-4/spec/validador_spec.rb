@@ -1,5 +1,5 @@
 require 'rspec' 
-require_relative '../model/Validador'
+require_relative '../model/validador'
 
 describe 'Validador' do
 
@@ -14,14 +14,15 @@ describe 'Validador' do
     
     it 'si tengo 360 de parametro es numerico' do
     expect(@valido360).to eq true
-  end
-    
     end
+    
+   end
   
   describe "Bad Request" do
     
     it 'si tengo Gabriel de parametro no es numerico' do
     expect(@validoGabriel).to eq false
+    end
   end
   
 end

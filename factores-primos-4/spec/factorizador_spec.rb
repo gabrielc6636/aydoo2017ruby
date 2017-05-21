@@ -14,14 +14,15 @@ describe 'Factorizador' do
     
     it 'si tengo 360 de parametro obtengo 2 2 2 3 3 5' do
     expect(@valido360.length).to eq 6
-  end
-    
     end
+    
+  end
   
   describe "Bad Request" do
     
     it 'si tengo 360 de parametro obtengo nada' do
     expect(@valido1.length).to eq 0
+    end
   end
   
 end
