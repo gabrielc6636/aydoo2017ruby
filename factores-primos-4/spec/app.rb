@@ -10,22 +10,13 @@ get '/primos/:valor' do |numeroAFactorizar|
   respuesta = controlador.generarFactores(numeroAFactorizar,"ASC")
   status respuesta.getStatus
   body respuesta.getBody
-  #if controlador.validarParametro(numeroAFactorizar) == true
-  #  body controlador.calcularFactores(numeroAFactorizar,"ASC")
-  #else
-  #   status 400
-  #    body 'Bad Request'
-  #end
 end
 
 post '/primos' do
   numeroAFactorizar = params['x']
   puts numeroAFactorizar
   controlador = Controlador.new
-  if controlador.validarParametro(numeroAFactorizar) == true
-     body controlador.calcularFactores(numeroAFactorizar,"DESC")
-  else
-     status 400
-      body 'Bad Request'
-  end
+  respuesta = controlador.generarFactores(numeroAFactorizar,"DESC")
+  status respuesta.getStatus
+  body respuesta.getBody
 end
