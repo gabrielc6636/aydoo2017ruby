@@ -2,7 +2,8 @@ require 'sinatra'
 require_relative '../model/controlador'
 require_relative '../model/respuesta'
 
-get '/primos/:valor' do |numeroAFactorizar|
+get '/primos' do
+  numeroAFactorizar = params[:x]
   controlador = Controlador.new
   respuesta = controlador.generarFactores(numeroAFactorizar,"ASC")
   status respuesta.getStatus
@@ -10,7 +11,7 @@ get '/primos/:valor' do |numeroAFactorizar|
 end
 
 post '/primos' do
-  numeroAFactorizar = params['x']
+  numeroAFactorizar = params[:x]
   controlador = Controlador.new
   respuesta = controlador.generarFactores(numeroAFactorizar,"DESC")
   status respuesta.getStatus
