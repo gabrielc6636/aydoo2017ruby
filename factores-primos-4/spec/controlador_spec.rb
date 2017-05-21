@@ -14,6 +14,14 @@ describe 'Controlador' do
   it 'tengo Gabriel de parametro reviso que sea numerico' do
     expect(controlador.validarParametro('Gabriel')).to eq false
   end
+  
+  it 'tengo 360 de parametro reviso que sea numerico' do
+    expect(controlador.generarFactores('360').getStatus).to eq 200
+  end
+  
+  it 'tengo Gabriel de parametro reviso que sea numerico' do
+    expect(controlador.generarFactores('Gabriel').getStatus).to eq 400
+  end
 
 =begin
   it 'chop de 3 y [3] deberia ser 0' do
