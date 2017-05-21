@@ -8,7 +8,7 @@ describe 'Controlador' do
   let(:controlador) { Controlador.new }  
    
   it 'tengo 360 de parametro reviso que sea numerico' do
-    expect(controlador.validarParametro(360)).to eq true
+    expect(controlador.validarParametro('360')).to eq true
   end
   
   it 'tengo Gabriel de parametro reviso que sea numerico' do
