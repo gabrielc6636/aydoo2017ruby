@@ -5,8 +5,8 @@ describe 'Factorizador' do
 
 	before do
       @factorizador = Factorizador.new
-      @valido360 = @factorizador.calcularFactores('360')
-	  @valido1 = @factorizador.calcularFactores('1')
+      @valido360 = @factorizador.calcularFactores(360)
+	  @valido1 = @factorizador.calcularFactores(1)
 
     end
 
