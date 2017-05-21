@@ -15,7 +15,7 @@ describe 'Validador' do
     end
    end
   
-  describe "Bad Request" dos
+  describe "Bad Request" do
     it 'si tengo Gabriel de parametro no es numerico' do
     expect(@validoGabriel).to eq false
     end
