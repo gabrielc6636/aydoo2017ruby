@@ -6,7 +6,7 @@ describe 'ImpresorAscendente' do
 
 	before do
       @impresorAsc = ImpresorAscendente.new
-      @respuestaASC = @impresorAsc.imprimirConFormato('360','ASC')
+      @respuestaASC = @impresorAsc.imprimirConFormato('360')
 
     end
 
@@ -24,7 +24,7 @@ describe 'ImpresorDescendente' do
 	before do
 
 	  @impresorDsc = ImpresorDescendente.new
-      @respuestaDESC = @impresorDsc.imprimirConFormato('360','DESC')
+      @respuestaDESC = @impresorDsc.imprimirConFormato('360')
 
     end
 
